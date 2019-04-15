@@ -1,0 +1,2 @@
+install -d %{buildroot}/usr/bin
+install -p -m 755 /go/src/github.com/openfaas/faas-cli/faas-cli %{buildroot}/usr/bin/faas-cli
