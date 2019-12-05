@@ -1,2 +1,13 @@
 # This file contains build requirements that get picked up but are
 # undesirable. One entry per line, no whitespace.
+go-github.com-cpuguy83-go-md2man
+go-github.com-davecgh-go-spew
+go-github.com-konsorten-go-windows-terminal-sequences
+go-github.com-mitchellh-go-homedir
+go-github.com-pmezard-go-difflib
+go-github.com-spf13-viper
+go-github.com-stretchr-objx
+go-github.com-stretchr-testify
+go-golang.org-x-sys
+go-gopkg.in-check.v1
+go-gopkg.in-yaml.v2
