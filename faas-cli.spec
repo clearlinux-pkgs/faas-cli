@@ -4,7 +4,7 @@
 #
 Name     : faas-cli
 Version  : 0.11.0
-Release  : 11
+Release  : 12
 URL      : https://github.com/openfaas/faas-cli/archive/0.11.0.tar.gz
 Source0  : https://github.com/openfaas/faas-cli/archive/0.11.0.tar.gz
 Summary  : No detailed summary available
@@ -45,16 +45,16 @@ cd %{_builddir}/faas-cli-0.11.0
 
 %build
 ## build_prepend content
-export GOPATH=/go
-mkdir -p /go/src/github.com/openfaas/
-ln -s /builddir/build/BUILD/faas-cli-%{version} /go/src/github.com/openfaas/faas-cli
-cd /go/src/github.com/openfaas/faas-cli
+export GOPATH=$HOME/go
+mkdir -p $HOME/go/src/github.com/openfaas/
+ln -s $HOME/build/BUILD/faas-cli-%{version} $HOME/go/src/github.com/openfaas/faas-cli
+cd $HOME/go/src/github.com/openfaas/faas-cli
 ## build_prepend end
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1575525825
+export SOURCE_DATE_EPOCH=1576005441
 export GCC_IGNORE_WERROR=1
 export GOPROXY=file:///usr/share/goproxy
 export AR=gcc-ar
@@ -68,7 +68,7 @@ make  %{?_smp_mflags}  || go build
 
 
 %install
-export SOURCE_DATE_EPOCH=1575525825
+export SOURCE_DATE_EPOCH=1576005441
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/faas-cli
 cp %{_builddir}/faas-cli-0.11.0/LICENSE %{buildroot}/usr/share/package-licenses/faas-cli/318d55ea7882b3b33bd94122474ff2c381496498
@@ -102,7 +102,7 @@ cp %{_builddir}/faas-cli-0.11.0/vendor/gopkg.in/yaml.v2/NOTICE %{buildroot}/usr/
 true
 ## install_append content
 install -d %{buildroot}/usr/bin
-install -p -m 755 /go/src/github.com/openfaas/faas-cli/faas-cli %{buildroot}/usr/bin/faas-cli
+install -p -m 755 $HOME/go/src/github.com/openfaas/faas-cli/faas-cli %{buildroot}/usr/bin/faas-cli
 ## install_append end
 
 %files
