@@ -4,7 +4,7 @@
 #
 Name     : faas-cli
 Version  : 0.12.8
-Release  : 19
+Release  : 20
 URL      : https://github.com/openfaas/faas-cli/archive/0.12.8/faas-cli-0.12.8.tar.gz
 Source0  : https://github.com/openfaas/faas-cli/archive/0.12.8/faas-cli-0.12.8.tar.gz
 Summary  : No detailed summary available
@@ -51,7 +51,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1593712043
+export SOURCE_DATE_EPOCH=1595022499
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -60,11 +60,11 @@ export CFLAGS="$CFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FCFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export FFLAGS="$FFLAGS -O3 -ffat-lto-objects -flto=4 "
 export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
-make  %{?_smp_mflags}  || go build
+make  %{?_smp_mflags}  || go build -buildmode=pie -v
 
 
 %install
-export SOURCE_DATE_EPOCH=1593712043
+export SOURCE_DATE_EPOCH=1595022499
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/faas-cli
 cp %{_builddir}/faas-cli-0.12.8/LICENSE %{buildroot}/usr/share/package-licenses/faas-cli/318d55ea7882b3b33bd94122474ff2c381496498
