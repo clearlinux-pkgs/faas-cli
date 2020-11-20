@@ -1,1 +1,1 @@
-|| go build -buildmode=pie -v
+|| go build -buildmode=pie -mod=vendor -v
