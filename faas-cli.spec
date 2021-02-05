@@ -4,7 +4,7 @@
 #
 Name     : faas-cli
 Version  : 0.12.19
-Release  : 28
+Release  : 29
 URL      : https://github.com/openfaas/faas-cli/archive/0.12.19/faas-cli-0.12.19.tar.gz
 Source0  : https://github.com/openfaas/faas-cli/archive/0.12.19/faas-cli-0.12.19.tar.gz
 Summary  : No detailed summary available
