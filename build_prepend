@@ -1,4 +1,0 @@
-export GOPATH=$HOME/go
-mkdir -p $HOME/go/src/github.com/openfaas/
-ln -s $HOME/build/BUILD/faas-cli-%{version} $HOME/go/src/github.com/openfaas/faas-cli
-cd $HOME/go/src/github.com/openfaas/faas-cli
