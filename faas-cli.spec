@@ -4,7 +4,7 @@
 #
 Name     : faas-cli
 Version  : 0.13.13
-Release  : 38
+Release  : 39
 URL      : https://github.com/openfaas/faas-cli/archive/0.13.13/faas-cli-0.13.13.tar.gz
 Source0  : https://github.com/openfaas/faas-cli/archive/0.13.13/faas-cli-0.13.13.tar.gz
 Summary  : No detailed summary available
