@@ -4,7 +4,7 @@
 #
 Name     : faas-cli
 Version  : 0.13.13
-Release  : 41
+Release  : 42
 URL      : https://github.com/openfaas/faas-cli/archive/0.13.13/faas-cli-0.13.13.tar.gz
 Source0  : https://github.com/openfaas/faas-cli/archive/0.13.13/faas-cli-0.13.13.tar.gz
 Summary  : No detailed summary available
@@ -12,9 +12,8 @@ Group    : Development/Tools
 License  : Apache-2.0 BSD-2-Clause BSD-3-Clause MIT
 Requires: faas-cli-bin = %{version}-%{release}
 Requires: faas-cli-license = %{version}-%{release}
-Requires: requests
 BuildRequires : buildreq-golang
-BuildRequires : requests
+BuildRequires : pypi(requests)
 
 %description
 Go package for expanding variables in a string using ${var} syntax. Includes support for bash string replacement functions.
@@ -45,7 +44,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1626999757
+export SOURCE_DATE_EPOCH=1641948412
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -58,7 +57,7 @@ make  %{?_smp_mflags}  || go build -v -mod=vendor -ldflags='-X github.com/openfa
 
 
 %install
-export SOURCE_DATE_EPOCH=1626999757
+export SOURCE_DATE_EPOCH=1641948412
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/faas-cli
 cp %{_builddir}/faas-cli-0.13.13/LICENSE %{buildroot}/usr/share/package-licenses/faas-cli/318d55ea7882b3b33bd94122474ff2c381496498
