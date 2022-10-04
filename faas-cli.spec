@@ -4,7 +4,7 @@
 #
 Name     : faas-cli
 Version  : 0.14.8
-Release  : 55
+Release  : 56
 URL      : https://github.com/openfaas/faas-cli/archive/0.14.8/faas-cli-0.14.8.tar.gz
 Source0  : https://github.com/openfaas/faas-cli/archive/0.14.8/faas-cli-0.14.8.tar.gz
 Summary  : No detailed summary available
