@@ -6,10 +6,10 @@
 # autospec commit: e661f3a
 #
 Name     : faas-cli
-Version  : 0.16.18
-Release  : 63
-URL      : https://github.com/openfaas/faas-cli/archive/0.16.18/faas-cli-0.16.18.tar.gz
-Source0  : https://github.com/openfaas/faas-cli/archive/0.16.18/faas-cli-0.16.18.tar.gz
+Version  : 0.16.21
+Release  : 64
+URL      : https://github.com/openfaas/faas-cli/archive/0.16.21/faas-cli-0.16.21.tar.gz
+Source0  : https://github.com/openfaas/faas-cli/archive/0.16.21/faas-cli-0.16.21.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 BSD-2-Clause BSD-3-Clause CC-BY-SA-4.0 MIT
@@ -45,8 +45,8 @@ license components for the faas-cli package.
 
 
 %prep
-%setup -q -n faas-cli-0.16.18
-cd %{_builddir}/faas-cli-0.16.18
+%setup -q -n faas-cli-0.16.21
+cd %{_builddir}/faas-cli-0.16.21
 
 %build
 ## build_prepend content
@@ -56,7 +56,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1700607067
+export SOURCE_DATE_EPOCH=1701339575
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -89,14 +89,13 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1700607067
+export SOURCE_DATE_EPOCH=1701339575
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/faas-cli
 cp %{_builddir}/faas-cli-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/faas-cli/ce62120d32a64c44b0e61ee13b9b5fd2c0cea2a1 || :
 cp %{_builddir}/faas-cli-%{version}/vendor/github.com/Azure/go-ansiterm/LICENSE %{buildroot}/usr/share/package-licenses/faas-cli/836ef1b46953afdb78ce3929bc6831ca83620b65 || :
 cp %{_builddir}/faas-cli-%{version}/vendor/github.com/Masterminds/semver/LICENSE.txt %{buildroot}/usr/share/package-licenses/faas-cli/020acfcf6d6bd6d701d19bd16f49d0bf18441779 || :
 cp %{_builddir}/faas-cli-%{version}/vendor/github.com/VividCortex/ewma/LICENSE %{buildroot}/usr/share/package-licenses/faas-cli/5fcf3d8a80be9b86a2c442ab938090611e6ee317 || :
-cp %{_builddir}/faas-cli-%{version}/vendor/github.com/acomagu/bufpipe/LICENSE %{buildroot}/usr/share/package-licenses/faas-cli/35956c60fc018a9f8bed902c6ca19433795b2671 || :
 cp %{_builddir}/faas-cli-%{version}/vendor/github.com/alexellis/arkade/LICENSE %{buildroot}/usr/share/package-licenses/faas-cli/3dbdeb041ef56b91e6c094423ab0c23b1dba025f || :
 cp %{_builddir}/faas-cli-%{version}/vendor/github.com/alexellis/go-execute/v2/LICENSE %{buildroot}/usr/share/package-licenses/faas-cli/95dc7028a6518eb427e543f891c774df3b24b0cf || :
 cp %{_builddir}/faas-cli-%{version}/vendor/github.com/alexellis/hmac/LICENSE %{buildroot}/usr/share/package-licenses/faas-cli/f1ae47fecc13bcdc9beb6dc74be71d0fd4e34bbd || :
@@ -175,7 +174,6 @@ install -p -m 755 ./faas-cli %{buildroot}/usr/bin/faas-cli
 /usr/share/package-licenses/faas-cli/298850a6cdb155f54cfa44641df70b36228ed031
 /usr/share/package-licenses/faas-cli/2b8b815229aa8a61e483fb4ba0588b8b6c491890
 /usr/share/package-licenses/faas-cli/318dc4af5ea975b426db65053b4f16ca91341d15
-/usr/share/package-licenses/faas-cli/35956c60fc018a9f8bed902c6ca19433795b2671
 /usr/share/package-licenses/faas-cli/3abe2ed84bfc0af4a31be3c2cac403105beb0ce0
 /usr/share/package-licenses/faas-cli/3dbdeb041ef56b91e6c094423ab0c23b1dba025f
 /usr/share/package-licenses/faas-cli/3faf341fbc32621fe1ac089ae2ab7a23980fc189
